@@ -83,6 +83,23 @@ async fn main() {
       .expect("failed to build trader"),
   );
 
+  let trader_command_txs = HashMap::from([(market, trader_command_tx)]);
 
-  
+  let engine = Engine::builder()
+    .engine_id(engine_id)
+    .command_rx(command_rx)
+    .portfolio(portfolio)
+    .traders(traders)
+    .trader_command_txs(TradingSummary::init(StatisticConfig {
+      starting_equity: 1000.0,
+      trading_days_per_year: 365,
+      risk_free_return: 0.0,
+    }))
+    .build()
+    .expect("failed to build engine");
+
+  tokio::spawn(listen_to_engine_events(event_rx));
+  engine.run().await;
+
 }
+
