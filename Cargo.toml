@@ -41,4 +41,4 @@ prettytable-rs = "0.10.0"
 parking_lot = "0.12.1"
 
 
-fractal-pattern-indicator = { path = "./src/strategy/fractal-pattern-indicator" }
+fractal-indicator = { path = "./src/strategy/fractal-indicator" }
