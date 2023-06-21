@@ -76,19 +76,3 @@ impl FractalIndicator {
 }
 
 
-// use fractal_indicator::FractalIndicator;
-
-// fn main() {
-//     let highs = vec![30.0, 20.0, 40.0, 50.0, 25.0, 60.0];
-//     let lows = vec![10.0, 5.0, 15.0, 20.0, 10.0, 25.0];
-//     let period = 2;
-
-//     let indicator = FractalIndicator::new(period);
-//     let signals = indicator.calculate(&highs, &lows).unwrap();
-
-//     for (i, signal) in signals.iter().enumerate() {
-//         if *signal {
-//             println!("Fractal pattern signal found at index {}", i);
-//         }
-//     }
-// }
