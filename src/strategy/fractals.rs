@@ -29,7 +29,7 @@ use parking_lot::Mutex;
 use std::{collections::HashMap, fs, sync::Arc};
 use tokio::sync::mpsc;
 use uuid::Uuid;
-
+/// Fractal pattern indicator
 pub struct FractalIndicator {
  
   period: usize,
